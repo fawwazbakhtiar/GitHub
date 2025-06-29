@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Contact Me</title>
+  <link rel="stylesheet" href="style3.css">
+  <script src="https://kit.fontawesome.com/f321a1171e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="student.html" class="logo"><span>Fawwaz</span>Bakhtiar</a>
+
+    <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="background.html">Background</a>
+            <a href="skills.html">Skills</a>
+            <div class="dropdown">
+                <a href="#">Qualifications</a>
+                <div class="dropdown-content">
+                    <a href="qualimaahad.html">Maahad</a>
+                    <a href="qualispm.html">SPM</a>
+                    <a href="qualistpm.html">STPM</a>
+                </div>
+            </div>
+            <a href="certifications.html">Certifications</a>
+            <a href="achievements.html">Achievements</a>
+        </nav>
+
+    <a href="contact.html" class="contact">Contact Me</a>
+  </header>
+
+  <section class="contact-form">
+    <h2 class="contact-me">Contact <span>Me</span></h2>
+
+    <div class="input-box">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+    </div>
+
+    <div class="input-box">
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+    </div>
+
+    <textarea id="message" rows="10" placeholder="Your Message" required></textarea>
+
+    <button onclick="sendToWhatsApp()" class="btn-1">Send Message</button>
+  </section>
+
+  <footer class="footer">
+
+    <div class="social">
+            <a href="https://www.facebook.com/@fawwaz.trw" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.x.com/@Fawwazbakhtiarr" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/alfawwaz.bakhtiar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@al_fawwaz04" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+    <ul class="list">
+      <li><a href="homepage.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p class="copyright">© 2025 FawwazBakhtiar | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendToWhatsApp() {
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phoneNumber").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const finalMessage =
+        "Name: " + fullName + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Subject: " + subject + "\n" +
+        "Message: " + message;
+
+      const whatsappNumber = "60165259814";
+      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(finalMessage);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
